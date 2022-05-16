@@ -20,8 +20,7 @@ jobs:
     - name: Generate BDF
       env: |
         CPPTEST_SCAN_PROJECT_NAME: DevelopSampleProject
-        PROJECT_DIR:%~dp0
-        CPPTEST_SCAN_OUTPUT_FILE: %PROJECT_DIR%cpptestscan.bdf
+        CPPTEST_SCAN_OUTPUT_FILE: $0/cpptestscan.bdf
       run: |
            & "C:\cpptest\bin\cpptesttrace.exe" make all
       working-directory: .\DevelopSampleProject
