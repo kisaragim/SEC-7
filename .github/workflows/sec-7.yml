@@ -22,6 +22,8 @@ jobs:
         CPPTEST_SCAN_PROJECT_NAME: DevelopSampleProject
         CPPTEST_SCAN_OUTPUT_FILE: $GITHUB_WORKSPACE/DevelopSampleProject/cpptestscan.bdf
       run: |
+           echo $GITHUB_WORKSPACE
+           pwd
            & "C:\cpptest\bin\cpptesttrace.exe" make all
            
       working-directory: .\DevelopSampleProject
