@@ -18,8 +18,9 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Generate BDF
-      env:
+      env: |
         CPPTEST_SCAN_PROJECT_NAME: DevelopSampleProject
+        CPPTEST_SCAN_OUTPUT_FILE: ./DevelopSampleProject
       run: |
            & "C:\cpptest\bin\cpptesttrace.exe" make all
       working-directory: .\DevelopSampleProject
