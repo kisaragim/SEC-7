@@ -50,7 +50,7 @@ jobs:
          # additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
          # commandLinePattern : ' ${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams} '
         additionalParams: '-localsettings ./DevelopSampleProject/setting.properties'
-        commandLinePattern: '${cpptestcli} -J-Duser.language=EN -J-Duser.country=US -data ./ -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
+        commandLinePattern: '${cpptestcli} -J-Duser.language=EN -J-Duser.country=US -data ./ -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams} -publish'
     - name: ls_check
       run: |
          cd reports
