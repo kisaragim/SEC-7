@@ -61,7 +61,7 @@ jobs:
       if: always()
       uses: github/codeql-action/upload-sarif@v1
       env: 
-        GITHUB_TOKEN: ${{ MEHISYA }}
+        GITHUB_TOKEN: ${{ secrets.mehisya }}
       with:
         sarif_file: reports/report.sarif
     
