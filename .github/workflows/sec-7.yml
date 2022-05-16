@@ -20,10 +20,7 @@ jobs:
     - name: Generate BDF
       env: 
         CPPTEST_SCAN_PROJECT_NAME: DevelopSampleProject
-        CPPTEST_SCAN_OUTPUT_FILE: $GITHUB_WORKSPACE/cpptestscan.bdf
       run: |
-           echo $GITHUB_WORKSPACE
-           pwd
            & "C:\cpptest\bin\cpptesttrace.exe" make all
            
       working-directory: .\DevelopSampleProject
@@ -48,7 +45,7 @@ jobs:
         compilerConfig: 'gcc_9-64'
         testConfig: 'builtin://MISRA C 2012'
         reportFormat: xml,html,sarif
-        input: '$GITHUB_WORKSPACE/cpptestscan.bdf'
+        input: './DevelopSampleProject/BugDetective/cpptestscan.bdf'
         # For Standard
          # additionalParams: '-property report.custom.extension=sarif -property report.custom.xsl.file=${PARASOFT_SARIF_XSL}'
          # commandLinePattern : ' ${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams} '
