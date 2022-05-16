@@ -46,6 +46,10 @@ jobs:
          # commandLinePattern : ' ${cpptestcli} -data ../workspace -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams} '
         additionalParams: '-localsettings ./DevelopSampleProject/setting.properties'
         commandLinePattern: '${cpptestcli} -data ./ -config "${testConfig}" -report "${reportDir}" -bdf "${input}" ${additionalParams}'
+    - name: ls_check
+      run: |
+         cd reports
+         ls
 
     # Uploads analysis results in the SARIF format, so that they are displayed as GitHub code scanning alerts.
     - name: Upload results (SARIF)
