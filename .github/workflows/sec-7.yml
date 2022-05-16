@@ -20,7 +20,7 @@ jobs:
     - name: Generate BDF
       env: 
         CPPTEST_SCAN_PROJECT_NAME: DevelopSampleProject
-        CPPTEST_SCAN_OUTPUT_FILE: $0/cpptestscan.bdf
+        CPPTEST_SCAN_OUTPUT_FILE: $GITHUB_WORKSPACE/DevelopSampleProject/cpptestscan.bdf
       run: |
            & "C:\cpptest\bin\cpptesttrace.exe" make all
            
